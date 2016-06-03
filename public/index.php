@@ -30,18 +30,34 @@ $sitename = $sitename ? $sitename : 'example.com'
     <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <style>
+        .jumbotron{
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('https://placeimg.com/800/300/tech');
+        }
+
+        h1{
+            background-color: rgba(255,255,255,0.7);
+            padding: 40px 80px;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
 <div class="jumbotron">
     <div class="container text-center">
-        <h1><?php echo $sitename; ?> is <?php echo $intro; ?></h1>
-        <hr/>
-        <?php if($forsale): ?>
-            <p>Make an offer <a href="<?php echo $sale_url; ?>">here</a></p>
-        <?php else :  ?>
-            <p>Enquire about it <a href="mailto:&#119;&#104;&#111;&#105;&#115;&#64;&#115;&#116;&#117;&#101;&#121;&#110;&#101;&#116;&#46;&#99;&#111;&#109;">here</a></p>
-        <?php endif; ?>
+        <h1><?php echo $sitename; ?></h1>
     </div>
+</div>
+<div class="container text-center">
+    <h2>This domain is <?php echo $intro; ?></h2>
+    <hr/>
+    <?php if($forsale): ?>
+        <p class="lead">Make an offer <a href="<?php echo $sale_url; ?>">here</a></p>
+    <?php else :  ?>
+        <p class="lead">Enquire about it <a href="mailto:&#119;&#104;&#111;&#105;&#115;&#64;&#115;&#116;&#117;&#101;&#121;&#110;&#101;&#116;&#46;&#99;&#111;&#109;">here</a></p>
+    <?php endif; ?>
 </div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
