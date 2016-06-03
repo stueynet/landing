@@ -1,6 +1,6 @@
 <?php
-require '../vendor/autoload.php';
-$dotenv = new Dotenv\Dotenv('../');
+require __DIR__.'/../vendor/autoload.php';
+$dotenv = new Dotenv\Dotenv(__DIR__.'/../');
 $dotenv->load();
 $sitename = getenv('SITE_NAME');
 $forsale = getenv('FOR_SALE');
