@@ -8,6 +8,8 @@ $sale_url = getenv('SALE_URL');
 
 $intro = $forsale ? 'for sale' : 'in the foundry';
 
+$sitename = $sitename ? $sitename : 'example.com'
+
 ?>
 <!doctype html>
 <html class="no-js" lang="">
