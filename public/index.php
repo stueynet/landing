@@ -3,6 +3,11 @@ require '../vendor/autoload.php';
 $dotenv = new Dotenv\Dotenv('../');
 $dotenv->load();
 $sitename = getenv('SITE_NAME');
+$forsale = getenv('FOR_SALE');
+$sale_url = getenv('SALE_URL');
+
+$intro = $forsale ? 'for sale' : 'in the foundry';
+
 ?>
 <!doctype html>
 <html class="no-js" lang="">
@@ -27,9 +32,13 @@ $sitename = getenv('SITE_NAME');
 <body>
 <div class="jumbotron">
     <div class="container text-center">
-        <h1><?php echo $sitename; ?> is in the foundry</h1>
+        <h1><?php echo $sitename; ?> is <?php echo $intro; ?></h1>
         <hr/>
-        <p>Enquire about it <a href="mailto:whois@stueynet.com">here</a></p>
+        <?php if($forsale): ?>
+            <p>Make an offer <a href="<?php echo $sale_url; ?>">here</a></p>
+        <?php else :  ?>
+            <p>Enquire about it <a href="mailto:whois@stueynet.com">here</a></p>
+        <?php endif; ?>
     </div>
 </div>
 
