@@ -39,7 +39,7 @@ $sitename = $sitename ? $sitename : 'example.com'
         <?php if($forsale): ?>
             <p>Make an offer <a href="<?php echo $sale_url; ?>">here</a></p>
         <?php else :  ?>
-            <p>Enquire about it <a href="mailto:whois@stueynet.com">here</a></p>
+            <p>Enquire about it <a href="mailto:&#119;&#104;&#111;&#105;&#115;&#64;&#115;&#116;&#117;&#101;&#121;&#110;&#101;&#116;&#46;&#99;&#111;&#109;">here</a></p>
         <?php endif; ?>
     </div>
 </div>
